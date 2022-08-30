@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.error {
+	color: red;
+	text-align: left;
+}
+
+.form-registro--flex {
+	background: #FAFAFA;
+}
+
+.form-registro-container, .keep_in_home-container {
+	padding-top: 20px;
+}
+
+.form-registro-title {
+	font-size: 20px;
+	color: rgba(180,0,0,.8);
+	text-align: center;
+	margin: 15px auto;
+}
+
+.form-registro {
+	width: 270px;
+	margin: 10px auto;
+	padding: 15px;
+	box-sizing: border-box;
+	box-shadow:0px 0px 8px rgb(150,150,150);
+	border-radius: 10px;
+	background: #fff;
+}
+
+.form-registro input[type="text"],
+.form-registro input[type="password"],
+.form-registro input[type="submit"],
+select {
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	padding: 3px;
+	box-sizing: border-box;
+}
+
+.form-registro input[type="checkbox"],
+.form-registro input[type="file"] {
+	margin-bottom: 10px;
+}
+
+.form-registro input[type="file"] {
+	width: 100%;
+}
+
+.form-registro input[type="submit"] {
+	background: rgba(180,0,0,.8);
+	color: #fff;
+	font-size: 15px;
+	border: 0;
+}
+
+.form-registro input[type="submit"]:hover {
+	background: rgba(200,0,0,.8);
+	cursor: pointer;
+}
+
+@media screen and (min-width: 480px) {
+	.form-registro--flex {
+		background-image: url(../img/bg.jpg);
+		background-attachment: fixed;
+		background-size: 60% 100%;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.form-registro {
+		width: 100%;
+	}
+	.form-registro-container {
+		background: #FAFAFA;
+		padding: 15px;
+		padding-top: 53px;
+	}
+	.form-registro-container, .keep_in_home-container {
+		width: 46%;
+		box-sizing: border-box;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.form-registro--flex {
+		background-size: 40% 100%;
+	}
+	.form-registro-container {
+		padding-top: 60px;
+	}
+	.form-registro {
+		width: 300px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.form-registro--flex {
+		background-size: 35% 100%;
+	}
+	.form-registro-container, .keep_in_home-container {
+		width: 43%;
+	}
+	.form-registro {
+		width: 320px;
+		padding: 20px;
+	}
+	.form-registro input {
+		font-size: 15px;
+	}
+	.form-registro-title {
+		margin-top: 0;
+		font-size: 22px;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.form-registro--flex {
+		background-size: 30% 100%;
+	}
+	.form-registro-container, .keep_in_home-container {
+		width: 30%;
+	}
+	.form-registro-title {
+		font-size: 24px;
+	}
+	.form-registro {
+		width: 380px;
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+	.form-registro input[type="text"],
+	.form-registro input[type="password"],
+	.form-registro input[type="submit"],
+	.form-registro select {
+		font-size: 16px;
+		height: 35px;
+	}
+	.form-registro label {
+		font-size: 17px;
+	}
+}

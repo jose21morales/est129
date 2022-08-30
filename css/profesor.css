@@ -1,0 +1,588 @@
+body {
+	background: #fff;
+}
+
+.no_homework {
+	margin-top: 10px;
+	margin-bottom: 1000px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-title, .header-grado_grupo {
+	font-size: 18px;
+	margin:10px 0 10px 0;
+	color: #c33333;
+}
+
+.line-hr {
+	margin-top: 10px;
+	color: #ccc;
+}
+
+/*Estilos del menu*/
+
+.logo {
+	display: none;
+	text-align: center;
+	background: rgb(145,0,145);
+	color: #fff;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+.icon-bars {
+	display: block;
+	color: #fff;
+	font-size: 1.5em;
+	border:1px solid #fff;
+	border-radius: 3px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 45px;
+	float:right;
+	margin-top: 7px;
+	margin-right: 7px;
+}
+
+.menu {
+	display: block;
+	list-style: none;
+	position: absolute;
+	width: 93%;
+	margin-top: 55px;
+	left:-200%;
+	transition: all 0.3s;
+}
+.menu-perfil {
+	display: flex;
+}
+.menu-perfil-img {
+	width: 43px;
+	height: 43px;
+	border-radius: 50%;
+}
+.menu-perfil-p {
+	margin-top: 8px;
+	margin-left: 10px;
+	font-size: 12px;
+}
+.menu__item {
+	background: #eee;
+	display: block;
+	text-decoration: none;
+	color: #000;
+	border-radius: 7px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.menu__item:hover {
+	background: #DBDBDB;
+}
+
+.menu2 {
+	transform: translateY(-10px);
+	z-index: -1;
+	opacity: 0;
+	list-style: none;
+	position: absolute;
+	width: 88%;
+	margin-top: 7px;
+	transition: all .5s;
+	background: #eee;
+	border-radius: 7px;
+}
+.show-submenu {
+	transform: translateY(0);
+	z-index: 1;
+	opacity: 1;
+}
+.menu__item2 {
+	width: 100%;
+}
+.menu__link2 {
+	display: block;
+	text-decoration: none;
+	color: #000;
+	padding: 10px;
+	cursor: pointer;	
+}
+
+.menu__link2:hover {
+	background: #DBDBDB;
+	border-radius: 7px;
+}
+
+.show {
+	left: 0;
+}
+
+/*Estilos del banner*/
+
+.banner {
+	background-image: url(../img/covid.jpg);
+	background-attachment: fixed;
+	background-size: 490px 90%;
+	height: 300px;
+	margin-bottom: 20px;
+}
+
+.banner-links {
+	transform: translateY(271px);
+	width: 168px;
+	margin: auto;
+	list-style: none;
+	display: flex;
+}
+
+.banner__link {
+	color: #fff;
+	text-decoration: none;
+	background: 0;
+	padding: 10px;
+	transition: all .3s;
+}
+
+.select {
+	color: #000;
+	background: #fff;
+}
+.banner__link:hover {
+	background: #c33333;
+	color: #fff;
+}
+
+/*Estilos del side-bar*/
+.body-flex {
+	display: flex;
+}
+.sidebar {
+	width: 240px;
+	height: 100%;
+	position: fixed;
+	background: #333;
+	color: #fff;
+	outline: 1px solid #2a2a2a;
+}
+
+.sidebar-title {
+	padding: 10px;
+	text-align: center;
+	background: #2a2a2a;
+	font-size: 20px;
+	margin: 0;
+}
+
+/*Estilos del sidebar - Creación del evento click*/
+
+.sidebar-menu1,.sidebar-menu2,
+.sidebar-menu3 {
+	display: none;
+}
+.sidebar-menu-grado1,.sidebar-menu-grado2,
+.sidebar-menu-grado3 {
+	display: block;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+.show-group {
+	display: block;
+}
+
+/*Cierrre del evento click*/
+
+
+.sidebar .sidebar-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar-menu-grado1,
+.sidebar-menu-grado2, .sidebar-menu-grado3,
+.sidebar-menu-li2 {
+	outline: 1px solid #2a2a2a;
+	transition: all 0.3s;
+}
+.sidebar-menu-grado1:hover,
+.sidebar-menu-grado2:hover, .sidebar-menu-grado3:hover,
+.sidebar-menu-li2:hover {
+	background: #444;
+	border-left: 5px solid #eee;
+}
+
+.sidebar-menu-link2 {
+	display: block;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+}
+.global-container {
+	position: relative;
+	transition: all 0.3s;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+.menu-bar {
+	cursor: pointer;
+	width: 25px;
+	padding-top: 10px;
+}
+
+.open {
+	transform: translateX(250px);
+}
+
+/*Estilos del boton - Nueva tarea*/
+
+.btn-new {
+	background: #FF8000;
+	color: #fff;
+	font-size: 15px;
+	text-decoration: none;
+	padding: 6px;
+	border:2px solid rgb(200,100,0);
+	border-radius: 3px;
+	margin-bottom: 60px;
+}
+
+.btn-new:hover {
+	background: rgb(240,140,0);
+}
+/*Estilos de section*/
+.not_homework {
+	color: gray;
+}
+.section-homework {
+	overflow: hidden;
+	margin-top: 20px;
+}
+.perfil__teacher {
+	display: flex;
+}
+.perfil__teacher-img {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+}
+.perfil__teacher-content {
+	margin-left: 10px;
+}
+/*Contenido de tareas*/
+
+.homework {
+	background: skyblue;
+	padding: 10px;
+	margin-bottom: 40px;
+	border-radius: 20px;
+	border-top-left-radius: 0;
+}
+.homework-title {
+	font-size: 22px;
+	color: rgba(180,0,0,.8);
+}
+
+.homework-date {
+	font-size: 14px;
+	font-weight: normal;
+	color: gray;
+	margin-bottom: 10px;
+}
+.homework-commenter {
+	margin-bottom: 10px;
+}
+.homework-link {
+	width: 265px;
+	margin-bottom: 10px;
+}
+.homework-video, .homework-img,
+.homework-audio {
+	width: 270px;
+	height: 100%;
+	margin-bottom: 10px;
+}
+.homework-pdf {
+	text-decoration: none;
+	background: rgb(225,0,0);
+	color: #fff;
+	border-radius: 3px;
+	padding: 5px;
+	font-family: Calibri;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+/*Envio de tareas - alumnos*/
+
+.alumno__homework {
+	overflow: hidden;
+	margin: 3px;
+}
+.line-alumnos {
+	border:1px solid rgb(250,150,0);
+	margin: 40px 0 40px 0;
+}
+.alumno__homework-perfil {
+	display: flex;
+	margin-bottom: 8px;
+}
+
+.alumno__homework-img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.alumno__homework-content {
+	margin-left: 12px;
+}
+/*Contenedor comentario*/
+.alumno__homework-comment {
+	margin-top: -15px;
+	width: 75%;
+	float: right;
+}
+.alumno__homework-date {
+	font-size: 14px;
+	color: gray;
+	margin-bottom: 6px;
+}
+.alumno__homework-commenter {
+	margin-bottom: 6px;
+}
+.alumno__homework-label {
+	font-size: 14px;
+}
+.alumno__homework-files {
+	text-decoration: none;
+	background: rgb(190,0,0);
+	color: #fff;
+	border-radius: 3px;
+	padding: 3px;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+/*Paginación*/
+	   #active > .pag-link{
+	   	background: rgb(130,130,130); 
+	   }
+	  .paginacion {
+	  	margin: 15px auto;
+	  	text-align: center;
+	  }
+
+      .paginacion > .li{
+      	list-style: none;
+      	display: inline-block;
+      	margin-right:7px;
+      }
+      .paginacion > .li > .pag-link {
+      	color: #FFFFFF;
+      	text-decoration: none;
+      	padding: 10px 17px 10px 17px;
+        display: block;
+		background: rgb(180,0,0); /* Old browsers */
+		border-radius: 5px;
+
+      }
+      .btn > .pag-link {
+		background: brown; /* Old browsers */
+		text-align: center;
+      }
+/*Estilos del footer*/
+
+.footer-content {
+	width: 100%;
+	font-size: 13px;
+	background: #444;
+	padding: 15px;
+	box-sizing: border-box;
+	text-align: center;
+	color: #fff;
+}
+
+@media screen and (min-width: 480px) {
+	.header {
+		margin-top: -31px;
+		padding: 8px;
+	}
+	.header-title, .header-grado_grupo {
+		font-size: 20px;
+		margin:6px 0 6px 0;
+	}
+	.header-title {
+		margin-left: 22px;
+	}
+	/* Estilos del menu */
+	.menu {
+		width: 70%;
+	}
+	.menu-perfil-p {
+		font-size: 15px;
+	}
+	/*Estilos del banner*/
+	.banner {
+		background-size: 100% 100%;
+	}
+	.homework-link {
+		width: 99%;
+		height: 250px;
+	}
+	.homework-video,.homework-img,
+	.homework-audio {
+		width: 100%;
+	}
+	.homework {
+		padding: 20px;
+	}
+
+	.alumno__homework {
+		width: 90%;
+		margin:auto;
+	}
+	.alumno__homework-comment {
+		width: 85%;
+	}
+	.footer-content {
+		font-size: 14px;
+	}
+}
+@media screen and (min-width: 768px) {
+	/* Estilos del menu */
+	.menu {
+		width: 43%;
+	}
+	.homework-link {
+		height: 350px;
+	}
+	.alumno__homework-comment {
+		width: 90%;
+	}
+	.alumno__homework {
+		width: 80%;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.container {
+		width: 1000px;
+		margin: auto;
+	}
+	.header-title {
+		font-size: 22px;
+	}
+	/*Estilos del menu*/
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		background: none;
+	}
+	.icon-bars {
+		display: none;
+	}
+	.logo {
+		display: block;
+		margin: 0;
+		font-size: 22px;
+		padding: 0;
+		text-align: left;
+		background: 0;
+		margin-top: 10px;
+	}
+	.menu {
+		position: relative;
+		left: 0;
+		margin-top: 0;
+		width: 31%;
+	}
+	.menu__item {
+		background: 0;
+		color: #fff;
+	}
+	.menu__item:hover {
+		background: 0;
+	}
+	.menu-perfil-img {
+		width: 43px;
+		height: 43px;
+	}
+	.menu2 {
+		position: absolute;
+		list-style: none;
+		width: 65%;
+	}
+	/*Estilos del banner*/
+	.banner {
+		background-size: 80% 100%;
+		margin-top: -67px;
+		height: 200px;
+	}
+    .banner-links {
+    	transform: translateY(171px);
+	    margin-right: 120px;
+    }
+	/*Estilo del boton - Nueva tarea*/
+	.btn-new {
+
+	}
+	/*Estilo de las tareas*/
+	.section-homework {
+		margin-top: 20px;
+	}
+	.alumno__homework-comment {
+		width: 90%;
+	}
+	.alumno__homework {
+		width: 65%;
+	}
+	.homework {
+		width: 85%;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.menu-bar {
+		width: 33px;
+	}
+	.header-title {
+		margin-left: 35px;
+	}
+	.logo {
+		font-size: 24px;
+	}
+	.menu {
+		width: 21%;
+	}
+	.menu__item {
+		background: 0;
+	}
+	.menu-perfil-img {
+		width: 47px;
+		height: 47px;
+	}
+	.menu-perfil-p {
+		font-size: 16px;
+	}
+	.banner-links {
+		transform: translateY(166px);
+		width: 190px;
+		margin-right: 160px;
+	}
+	.banner__link {
+		padding: 15px;
+	}
+	.footer-content {
+		font-size: 16px;
+	}
+}

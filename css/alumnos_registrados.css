@@ -1,0 +1,58 @@
+.alumnos-registrados {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	color: rgb(160,0,0);
+}
+.table-alum {
+	border:0;
+	border-radius: 5px;
+	text-align: center;
+	background: #fff;
+	margin-bottom: 20px;
+}
+.table-alum thead tr th {
+	font-size: 12px;
+	background: #c33333;
+	color: #fff;
+}
+.table-alum tbody tr td {
+	font-size: 12px;
+	box-shadow: -1px 1px 1px #ccc;
+}
+
+@media screen and (min-width: 480px) {
+    .alumnos-registrados-title,
+    .alumnos-registrados-grado__grupo {
+    	font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .alumnos-registrados-title,
+    .alumnos-registrados-grado__grupo {
+    	font-size: 24px;
+    }
+	.table-alum thead tr th {
+	    font-size: 16px;
+	    padding: 5px;
+    }
+    .table-alum tbody tr td {
+	    font-size: 15px;
+	    padding: 3px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+	.table-alum {
+		margin-bottom: 31px;
+	}
+	.table-alum thead tr th {
+	    font-size: 17px;
+	    padding: 8px;
+    }
+    .table-alum tbody tr td {
+	    font-size: 16px;
+	    padding: 6px;
+    }
+}

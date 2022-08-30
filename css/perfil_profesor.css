@@ -1,0 +1,294 @@
+.error {
+	color: red;
+	text-align: left;
+}
+.container {
+	width: 100%;
+	margin: auto;
+}
+body {
+	background: #FAFAFA;
+}
+/*Estilos de los botones*/
+.edit_perfil-flex {
+	display: flex;
+	width: 100%;
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+.edit_perfil-buttons {
+	width: 100px;
+}
+.btn_edit, .btn_pass {
+	width: 100%;
+	background: #fff;
+	padding: 18px;
+	font-size: 14px;
+	border:1px solid #DBDBDB;
+	cursor: pointer;
+}
+.btn_edit {
+	border-left: 3px solid #444;
+	font-weight: bold;
+}
+.btn_pass:hover {
+	border-left: 3px solid #ccc;
+}
+/*Estilos del formulario*/
+.form__teacher-title {
+	font-size: 20px;
+	color: rgba(180,0,0,.8);
+	text-align: center;
+	margin: 7px 0 17px 0;
+}
+.form__teacher {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 15px;
+	background: #fff;
+	border:1px solid #DBDBDB;
+}
+/*Estilos del perfil - cambiar foto*/
+.upload__image-perfil {
+	display: flex;
+}
+.upload__image-perfil-image {
+	width: 70px;
+	height: 70px;
+	object-fit: cover;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.upload__image-perfil-img {
+	display: flex;
+	align-items: baseline;
+}
+.icon-camera {
+	position: absolute;
+	background: rgba(0,0,0,.7);
+	color: #fff;
+	padding: 7px;
+	padding-bottom: 4px;
+	font-size: 14px;
+	border:2px solid #fff;
+	border-radius: 50%;
+	margin-left: -29px;
+	margin-top: -29px;
+	cursor: pointer;
+	transition: all .4s;
+}
+.icon-camera:hover {
+	transform: scale(1.15);
+}
+.upload__image-info {
+	width: 100%;
+	margin-top: 8px;
+	margin-left: 12px;
+}
+.upload__image-info-name, .upload__image-info-change {
+	font-size: 14px;
+}
+.upload__image-info-name-p {
+	margin-bottom: 10px;
+}
+.upload__image-info-change {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.upload__image-perfil > input {
+	display: none;
+}
+/*--------- Estilos del modal ---------*/
+
+.modal__perfil {
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,.8);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateY(-1000px);
+}
+.show-modal {
+	transform: translateY(0);
+}
+.modal__perfil-close {
+	background: #c33333;
+	color: #fff;
+	border-radius: 50%;
+	text-decoration: none;
+	top: 0;
+	float: right;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 6px;
+	padding: 7px 10px 7px 10px;
+}
+.modal__perfil-content {
+	width: 90%;
+	margin: auto;
+	margin-top: 65px;
+	background: #FAFAFA;
+	padding: 15px;
+	box-sizing: border-box;
+	transform: translateY(-25px);
+	border-radius: 12px;
+	text-align: center;
+	overflow: hidden;
+	transition: all .5s;
+}
+.show-modal-content {
+	transform: translateY(0);
+}
+.modal__perfil-content-title {
+	font-size: 20px;
+	margin-bottom: 8px;
+}
+.modal__perfil-content-img {
+	width: 225px;
+	height: 150px;
+}
+
+/*--------- Fin del modal ---------*/
+
+.form__teacher input[type="text"],
+.form__teacher input[type="password"],
+.form__teacher input[type="submit"],
+select {
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	padding: 3px;
+	box-sizing: border-box;
+}
+.form__teacher input[type="checkbox"],
+.form__teacher input[type="file"] {
+	margin-bottom: 10px;
+}
+
+.form__teacher input[type="file"] {
+	width: 100%;
+}
+
+.form__teacher input[type="submit"] {
+	background: rgba(180,0,0,.8);
+	color: #fff;
+	font-size: 15px;
+	border: 0;
+}
+
+.form__teacher input[type="submit"]:hover {
+	background: rgba(200,0,0,.8);
+	cursor: pointer;
+}
+@media screen and (min-width: 480px) {
+	.edit_perfil-flex {
+		width: 90%;
+		margin: auto;
+		margin-top: 60px;
+		margin-bottom: 20px;
+	}
+	.edit_perfil-buttons {
+		width: 200px;
+	}
+	.btn_edit, .btn_pass {
+		padding: 25px;
+	}
+	.form__teacher {
+		padding: 20px;
+	}
+	/*Estilos del perfil*/
+	.upload__image-info-name {
+		font-size: 16px;
+	}
+	/*Estilos del modal*/
+	.modal__perfil-content-title {
+		font-size: 24px;
+	}
+	.modal__perfil-content-img {
+		width: 350px;
+		height: 250px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.edit_perfil-flex {
+		width: 65%;
+	}
+	.form__teacher {
+		padding: 25px;
+	}
+	.btn_edit, .btn_pass {
+		font-size: 16px;
+	}
+	/*Estilos del perfil*/
+	.upload__image-info-name {
+		font-size: 17px;
+	}
+	.upload__image-info-change {
+		font-size: 15px;
+	}
+	/*Estilos del modal*/
+	.modal__perfil-content {
+		width: 70%;
+	}
+	.modal__perfil-content-img {
+		width: 450px;
+		height: 280px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container {
+		width: 1000px;
+		margin: auto;
+	}
+	/*Estilo de los botones*/
+	.edit_perfil-flex {
+		width: 60%;
+	}
+	.edit_perfil-buttons {
+		width: 300px;
+	}
+	.btn_edit, .btn_pass {
+		padding: 30px;
+	}
+	/*Estilo del modal*/
+	.modal__perfil-content {
+		width: 50%;
+	}
+	/*Estilo del formulario*/
+	.form__teacher {
+		padding: 35px;
+	}
+	.form__teacher-title {
+		font-size: 24px;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.btn_edit, .btn_pass {
+		font-size: 17px;
+	}
+	.form__teacher input[type="text"],
+	.form__teacher input[type="submit"] {
+		height: 35px;
+		font-size: 16px;
+	}
+	.form__teacher label {
+		font-size: 17px;
+	}
+	.modal__perfil-content {
+		margin-top: 200px;
+		padding: 30px;
+		width: 45%;
+	}
+	.modal__perfil-content-title {
+		font-size: 25px;
+	}
+	.modal__perfil-content-img {
+		width: 620px;
+		height: 330px;
+	}
+}

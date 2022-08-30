@@ -1,0 +1,175 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+	header('Location: ../index.php');
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>EST N° 129 | Escuela Secundaria Técnica N° 129</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/profesor.css">
+    <link rel="stylesheet" type="text/css" href="../css/alumnos_registrados.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.jpg">
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+	<div class="body-flex">
+
+    <div class="sidebar">
+    	<h2 class="sidebar-title">EST N° 129</h2>
+    	<ul class="sidebar-menu">
+    		<li class="sidebar-menu-grado1">1er. grado</li>
+    			<ul class="sidebar-menu1" id="sidebar-menu2">
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=1&grupo=a">A</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=1&grupo=b">B</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=1&grupo=c">C</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=1&grupo=d">D</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=1&grupo=e">E</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=1&grupo=f">F</a></li>
+    			</ul>
+    		
+    		<li class="sidebar-menu-grado2">2do. grado</li>
+    			<ul class="sidebar-menu2">
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=2&grupo=a">A</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=2&grupo=b">B</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=2&grupo=c">C</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=2&grupo=d">D</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=2&grupo=e">E</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=2&grupo=f">F</a></li>
+    			</ul>
+    		<li class="sidebar-menu-grado3">3er. grado</li>
+    			<ul class="sidebar-menu3">
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=3&grupo=a">A</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=3&grupo=b">B</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=3&grupo=c">C</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=3&grupo=d">D</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=3&grupo=e">E</a></li>
+    				<li class="sidebar-menu-li2"><a class="sidebar-menu-link2" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=3&grupo=f">F</a></li>
+    			</ul>
+    	</ul>
+    </div>
+
+    <div class="global-container">
+    	<img src="../img/menu.png" class="menu-bar"><br>
+
+	<div class="header">
+        <h2 class="header-title">Escuela Secundaria Técnica N° 129</h2>
+        <h2 class="header-grado_grupo"><?php echo strtoupper($_GET['grado'] . "° " .$_GET['grupo']); ?></h2>
+	</div>
+
+    <?php foreach($teacher_array as $teacher): ?>
+
+	<nav class="nav">
+		<h3 class="logo">DGEST</h3>
+		<span class="icon-bars" id="btnmenu"></span>
+		<ul class="menu" id="menu">
+
+			<li class="menu__item" id="menu-item">
+				<div class="menu-perfil">
+				<?php if($teacher['photo_perfil'] != ''){ ?>
+		    	  <img class="menu-perfil-img" src="../img/<?php echo $teacher['photo_perfil']; ?>">
+		    	<?php } else { ?>
+		    	  <img class="menu-perfil-img" src="../img/avatar-admin.jpg">
+		    	<?php } ?>
+
+		    	  <?php echo "<p class='menu-perfil-p'>".$teacher['mail']."</p>"; ?>
+		    	</div>
+		    </li>
+
+			   <ul class="menu2" id="menu2">
+			      <li class="menu__item2"><a class="menu__link2" href="../controller/perfil_profesor.controller.php?id=<?php echo $teacher['id_profesores'] ?>&photo_perfil=<?php echo $teacher['photo_perfil']; ?>&name=<?php echo $teacher['name']; ?>&last_name=<?php echo $teacher['last_name']; ?>&phone=<?php echo $teacher['phone']; ?>&mail=<?php echo $teacher['mail']; ?>&grado=<?php echo $_GET['grado']; ?>&grupo=<?php echo $_GET['grupo']; ?>"><span class="icon-user"></span> Editar</a></li>
+                  <li class="menu__item2"><a class="menu__link2" href="../model/close_session.php"><span class="icon-power-off"></span> Cerrar sesión</a></li>
+			   </ul>
+		</ul>
+	</nav>
+
+<?php endforeach; ?>
+
+<div class="banner">
+	    <ul class="banner-links">
+		    <li class="banner__item"><a class="banner__link" href="../index.php?id=<?php echo $_GET['id']; ?>&grado=<?php echo $_GET['grado']; ?>&grupo=<?php echo $_GET['grupo']; ?>">Inicio</a></li>
+		    <li class="banner__item"><a class="banner__link select" href="controller/alumnos_registrados.controller.php?id=<?php echo $_GET['id']; ?>&grado=<?php echo $_GET['grado']; ?>&grupo=<?php echo $_GET['grupo']; ?>">Alumnos</a></li>
+	    </ul>
+</div>
+
+<div class="alumnos-registrados container">
+    <h3 class="alumnos-registrados-title">Alumnos registrados</h3>
+    <h3 class="alumnos-registrados-grado__grupo"><?php echo $_GET['grado'] . "° " . strtoupper($_GET['grupo']); ?></h3>
+</div>
+
+<table class="table-alum container">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Dirección</th>
+            <th>Télefono</th>
+            <th>Correo</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <?php if (empty($datos_alumnos)) { ?>
+
+            <tr>
+                <td colspan="7">No hay alumnos registrados</td>
+            </tr>
+        <?php } else { ?>
+
+        <?php foreach($datos_alumnos as $data): ?>
+            <tr>
+                <td><?php echo $data['name']; ?></td>
+                <td><?php echo $data['last_name']; ?></td>
+                <td><?php echo $data['age']; ?></td>
+                <td><?php echo strtoupper($data['sex']); ?></td>
+                <td><?php echo $data['direction']; ?></td>
+                <td><?php echo $data['phone']; ?></td>
+                <td><?php echo $data['email']; ?></td>
+                
+            </tr>
+        <?php endforeach; ?>
+
+        <?php } ?>
+
+    </tbody>
+</table>
+
+<?php
+
+if (empty($datos_alumnos)) {
+    echo "<style>
+            @media screen and (min-width: 1600px) {
+                .table-alum {
+                    margin-bottom: 600px;
+                }
+            }
+
+          </style>";
+}
+
+?>
+
+<footer class="footer-content">
+    <p class="footer-content-p">&copy; Escuela Secundaria Técnica N° 129 | Todos los derechos reservados</p>
+</footer>
+
+</div>
+</div>
+
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="../js/submenu.js"></script>
+    <script type="text/javascript" src="../js/open.js"></script>
+    <script type="text/javascript" src="../js/open_group.js"></script>
+</body>
+</html>

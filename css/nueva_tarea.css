@@ -1,0 +1,104 @@
+.error {
+	color: red;
+	text-align: left;
+}
+.form-new-title {
+	font-size: 20px;
+	color: rgba(180,0,0,.8);
+	text-align: center;
+	margin: 7px 0 17px 0;
+}
+.form-new {
+	width: 270px;
+	margin: 10px auto;
+	padding: 15px;
+	box-sizing: border-box;
+	box-shadow:0px 0px 20px rgb(150,150,150);
+}
+
+.form-new input[type="text"],
+.form-new input[type="submit"],
+select {
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	padding: 3px;
+	box-sizing: border-box;
+}
+.form-new textarea {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	height: 100px;
+	min-height: 60px;
+	max-height: 140px;
+	font-family: 'Montserrat';
+	font-size: 14px;
+}
+.video, .img, .audio, .pdf {
+	background: skyblue;
+	color: #000;
+	font-weight: bold;
+	padding: 6px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.form-new input[type="file"] {
+	width: 100%;
+	margin-bottom: 10px;
+	display: none;
+}
+
+.form-new input[type="submit"] {
+	background: rgba(180,0,0,.8);
+	color: #fff;
+	font-size: 15px;
+	border: 0;
+}
+
+.form-new input[type="submit"]:hover {
+	background: rgba(200,0,0,.8);
+	cursor: pointer;
+}
+@media screen and (min-width: 480px) {
+	.container {
+		width: 100%;
+		margin: auto;
+	}
+	.form-new {
+		margin: 10px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container {
+		width: 1000px;
+		margin: auto;
+	}
+	.form-new {
+		width: 350px;
+		padding: 25px;
+	}
+	.form-new-title {
+		font-size: 24px;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.form-new {
+		width: 400px;
+		padding: 30px;
+	}
+	.form-new-title {
+		font-size: 24px;
+	}
+	.form-new label {
+		font-size: 17px;
+	}
+	.form-new input, .form-new textarea,
+	.form-new select, .form-new input[type="submit"] {
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,59 @@
+.covid-body {
+	background: #DBDBDB;
+}
+.covid-container {
+	background: #fff;
+	padding: 5px;
+    box-sizing: border-box;
+}
+.covid-content {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+.covid-title-h1 {
+	font-size: 25px;
+	color: green;
+	margin-bottom: 10px;
+}
+.covid-title {
+	font-size: 20px;
+	color: green;
+	margin-bottom: 10px;
+}
+.covid-txt {
+	text-align: justify;
+	color: rgb(70,70,70);
+}
+@media screen and (min-width: 480px) {
+	.covid-container {
+		width: 93%;
+		margin: auto;
+		padding: 15px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.covid-container {
+		width: 85%;
+		padding: 27px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.covid-container {
+		width: 80%;
+		padding: 35px;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.covid-container {
+		width: 1000px;
+		margin: auto;
+		padding: 40px;
+	}
+    .covid-title-h1 {
+	    font-size: 30px;
+	    margin-bottom: 30px;
+    }
+    .covid-title {
+	   font-size: 22px;
+    }
+}
